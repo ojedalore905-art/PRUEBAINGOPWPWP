@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dangerous Fellows: Otome Game</title>
+<style>
+:root{color-scheme:dark;--bg:#120a22;--bg2:#1d1038;--card:#241447;--p:#8b4dff;--p2:#b78cff;--pink:#ff5fa8;--ink:#f3ecff;--mute:#b6a6d9;--zom:#7ddc9a;--line:rgba(183,140,255,.25);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(18,10,34,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav b{color:var(--p2);letter-spacing:.5px}
+nav div a{margin-left:18px;color:var(--mute);font-size:.92rem}
+nav div a:hover{color:var(--ink)}
+.hero{background:radial-gradient(circle at 70% 20%,#4a1fa8 0,transparent 55%),linear-gradient(180deg,var(--bg2),var(--bg));padding:48px 0 20px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:center}
+.tag{display:inline-block;background:rgba(139,77,255,.25);border:1px solid var(--p);color:var(--p2);padding:4px 12px;border-radius:99px;font-size:.8rem}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.05;margin:14px 0}
+h1 span{background:linear-gradient(90deg,var(--p2),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mute);max-width:46ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{padding:12px 22px;border-radius:12px;font-weight:600;border:1px solid var(--p)}
+.btn.main{background:linear-gradient(135deg,var(--p),#6a2de0);box-shadow:0 8px 24px rgba(139,77,255,.45)}
+.btn:hover{transform:translateY(-2px)}
+.stats{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+.stats div{font-size:.8rem;color:var(--mute)}
+.stats b{display:block;font-size:1.4rem;color:var(--p2)}
+section{padding:56px 0}
+h2{font-size:1.8rem;margin:0 0 8px}
+h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--p),var(--pink));margin-top:8px}
+.lead{color:var(--mute);max-width:62ch}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.chars{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px}
+.char{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;text-align:center;transition:.2s}
+.char:hover{transform:translateY(-6px);border-color:var(--p)}
+.char svg{display:block;width:100%;height:auto}
+.char span{display:block;padding:8px 4px 12px;font-size:.8rem;color:var(--mute)}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:24px}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.feat i{font-style:normal;font-size:1.6rem}
+.feat h3{margin:8px 0 4px;color:var(--p2);font-size:1.05rem}
+.feat p{margin:0;color:var(--mute);font-size:.92rem}
+.cta{text-align:center;background:linear-gradient(135deg,#3b1a85,#1d1038);border:1px solid var(--p);border-radius:24px;padding:40px 20px}
+.cta p{color:var(--mute)}
+footer{padding:26px 0 40px;text-align:center;color:var(--mute);font-size:.8rem;border-top:1px solid var(--line)}
+.warn{color:var(--zom)}
+@media(max-width:760px){.hero .wrap,.two{grid-template-columns:1fr}.chars{grid-template-columns:repeat(3,1fr)}nav div a:nth-child(n+3){display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>♦ DANGEROUS FELLOWS</b><div><a href="#historia">Historia</a><a href="#chicos">Los chicos</a><a href="#juego">Juego</a><a href="#jugar">Jugar</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<span class="tag">Otome · Thriller romántico · Zombis</span>
+<h1>Dangerous <span>Fellows</span></h1>
+<p>¿Sobrevivir con amor? Elige bien, gana la confianza de cinco chicos encantadores y escapa de los zombis… si es que ese lugar es tan seguro como parece.</p>
+<div class="btns"><a class="btn main" href="#jugar">Jugar gratis</a><a class="btn" href="#historia">Conocer la historia</a></div>
+<div class="stats"><div><b>4.7 ★</b>en App Store</div><div><b>+30 K</b>valoraciones</div><div><b>5</b>chicos</div><div><b>Gratis</b>con compras</div></div>
+</div>
+<svg viewBox="0 0 400 360" role="img" aria-label="Ilustración de una escuela bajo la luna morada">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a24c9"/><stop offset="1" stop-color="#1d1038"/></linearGradient><radialGradient id="moon"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#d9c2ff"/></radialGradient></defs>
+<rect width="400" height="360" rx="24" fill="url(#sky)"/>
+<circle cx="300" cy="80" r="80" fill="#b78cff" opacity=".18"/><circle cx="300" cy="80" r="40" fill="url(#moon)"/>
+<g fill="#fff" opacity=".8"><circle cx="50" cy="50" r="2"/><circle cx="110" cy="90" r="1.5"/><circle cx="180" cy="40" r="2"/><circle cx="240" cy="130" r="1.5"/><circle cx="360" cy="150" r="2"/></g>
+<path d="M0 300 L70 255 L140 290 L220 240 L300 285 L400 250 V360 H0Z" fill="#2a1558" opacity=".7"/>
+<g fill="#120a22"><rect x="70" y="185" width="260" height="130"/><rect x="170" y="150" width="60" height="45"/><path d="M160 150 L200 115 L240 150Z"/><rect x="195" y="95" width="10" height="25"/></g>
+<g fill="#ffd36e"><rect x="90" y="205" width="22" height="26"/><rect x="130" y="205" width="22" height="26"/><rect x="250" y="205" width="22" height="26" opacity=".35"/><rect x="290" y="205" width="22" height="26"/><rect x="190" y="165" width="20" height="22"/></g>
+<g fill="#ff5fa8"><rect x="188" y="270" width="24" height="45"/></g>
+<g fill="#7ddc9a" opacity=".9"><circle cx="45" cy="305" r="9"/><rect x="38" y="313" width="14" height="30" rx="5"/><circle cx="350" cy="310" r="9"/><rect x="343" y="318" width="14" height="30" rx="5"/></g>
+<path d="M0 340 H400" stroke="#120a22" stroke-width="40"/>
+</svg>
+</div></header>
+
+<section id="historia"><div class="wrap two">
+<div><h2>La historia</h2>
+<p class="lead">Mientras huyes del ataque de un zombi, unos desconocidos te salvan por pura suerte: cinco chicos muy atractivos que se refugian en un edificio escolar junto a otros sobrevivientes.</p>
+<p class="lead">Pero <span class="warn">¿es realmente seguro ese lugar?</span> Tus decisiones construirán la intimidad con tu favorito y te llevarán a un final sorprendente.</p></div>
+<svg viewBox="0 0 300 240" role="img" aria-label="Ilustración de corazón entre zombis">
+<rect width="300" height="240" rx="20" fill="#241447"/>
+<path d="M150 190 C60 130 70 60 120 60 C140 60 150 78 150 78 C150 78 160 60 180 60 C230 60 240 130 150 190Z" fill="#8b4dff"/>
+<path d="M150 170 C85 125 92 78 122 78 C138 78 150 94 150 94" fill="none" stroke="#e5d6ff" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+<g fill="#7ddc9a" opacity=".85"><circle cx="40" cy="190" r="12"/><rect x="30" y="200" width="20" height="34" rx="7"/><circle cx="262" cy="195" r="12"/><rect x="252" y="205" width="20" height="30" rx="7"/></g>
+</svg>
+</div></section>
+
+<section id="chicos" style="background:var(--bg2)"><div class="wrap">
+<h2>Los cinco chicos</h2>
+<p class="lead">Cinco personalidades, cinco caminos y varios finales. ¿A quién le confiarás tu supervivencia?</p>
+<div class="chars" id="chars"></div>
+</div></section>
+
+<section id="juego"><div class="wrap">
+<h2>Cómo se juega</h2>
+<div class="feats">
+<div class="feat"><i>💬</i><h3>Novela visual</h3><p>Una historia con personajes atractivos y efectos de sonido envolventes.</p></div>
+<div class="feat"><i>🔀</i><h3>Tus decisiones cuentan</h3><p>Los vínculos que formes definen cuál de los finales verás.</p></div>
+<div class="feat"><i>👗</i><h3>Viste a tu protagonista</h3><p>Personaliza el avatar y regala obsequios a quien te interesa.</p></div>
+<div class="feat"><i>🏫</i><h3>Repara la escuela</h3><p>Ayuda a levantar el refugio mientras descubres sus secretos.</p></div>
+</div></div></section>
+
+<section id="jugar"><div class="wrap"><div class="cta">
+<h2 style="display:inline-block">¿Lista para sobrevivir?</h2>
+<p>Gratis con compras dentro de la app. Disponible para móvil.</p>
+<div class="btns" style="justify-content:center">
+<a class="btn main" href="https://apps.apple.com/app/id1439854222" target="_blank" rel="noopener">App Store</a>
+<a class="btn" href="https://www.taptap.io/app/150862" target="_blank" rel="noopener">TapTap</a>
+</div></div></div></section>
+
+<footer><div class="wrap">Página de fans no oficial. Dangerous Fellows pertenece a sus creadores (Storytaco / LucyDream). Las ilustraciones son representaciones estilizadas, no arte oficial. Contiene temática de zombis y violencia.</div></footer>
+
+<script>
+var cols=[["#8b4dff","#2b1560"],["#ff5fa8","#4a1650"],["#4fb3ff","#13335a"],["#ffb347","#4a2a12"],["#7ddc9a","#12402a"]];
+var hair=["#1a0f2e","#f5e6ff","#6b3b1f","#c0392b","#2c3e50"];
+var box="";
+cols.forEach(function(c,i){
+box+='<div class="char"><svg viewBox="0 0 120 150" role="img" aria-label="Silueta del chico '+(i+1)+'"><rect width="120" height="150" fill="'+c[1]+'"/><circle cx="60" cy="60" r="55" fill="'+c[0]+'" opacity=".25"/><path d="M15 150 Q15 108 60 105 Q105 108 105 150Z" fill="#120a22"/><path d="M48 105 L60 124 L72 105Z" fill="#f3ecff"/><rect x="53" y="88" width="14" height="18" fill="#f1d3c0"/><ellipse cx="60" cy="68" rx="22" ry="26" fill="#f1d3c0"/><path d="M36 66 Q34 36 60 38 Q88 36 84 66 Q78 50 60 52 Q44 50 36 66Z" fill="'+hair[i]+'"/><circle cx="51" cy="70" r="3" fill="#120a22"/><circle cx="69" cy="70" r="3" fill="#120a22"/><path d="M53 82 Q60 87 67 82" stroke="#a5605b" stroke-width="2" fill="none" stroke-linecap="round"/></svg><span>Chico '+(i+1)+'</span></div>';
+});
+document.getElementById("chars").innerHTML=box;
+</script>
+</body>
+</html>
